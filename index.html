@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #87CEEB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 40vw;
+            min-width: 300px;
+            margin: 50px 0 0 50px;
+            max-width: 100%;
+        }
+
+        label {
+            display: block;
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1em;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="">
+        <!-- Firstname Field -->
+        <div>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" required>
+        </div>
+        <br>
+
+        <!-- Middlename Field -->
+        <div>
+            <label for="mname">Middle name:</label>
+            <input type="text" id="mname" name="mname" required>
+        </div>
+        <br>
+
+        <!-- Lastname Field -->
+        <div>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" required>
+        </div>
+        <br>
+
+        <!-- Course Field -->
+        <div>
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="" disabled selected hidden>Course</option>
+                <option value="PBKK">PBKK</option>
+                <option value="PWEB">Pweb</option>
+                <option value="RSBP">RSBP</option>
+                <option value="Aljabar Linier">Aljabar Linier</option>
+            </select>
+        </div>
+        <br>
+
+        <!-- Gender Radio Buttons -->
+        <div>
+            <label>Gender:</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="M" required>
+                <label for="male" style="margin-right: 20px;">Male</label>
+                <input type="radio" id="female" name="gender" value="F" required>
+                <label for="female">Female</label>
+            </div>
+        </div>
+        <br>
+
+        <!-- Phone Field -->
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phonecode" name="code" maxlength="3" value="+62" required style="width: 20%; display: inline-block;">
+            <input type="tel" id="phone" name="phone" required style="width: 75%; display: inline-block;">
+        </div>
+        <br>
+
+        <!-- Address Field -->
+        <div>
+            <label for="addr">Address:</label>
+            <textarea id="addr" name="addr" rows="4" required></textarea>
+        </div>
+        <br>
+
+        <!-- Email Field -->
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <br>
+
+        <!-- Password Field -->
+        <div>
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" required>
+        </div>
+        <br>
+
+        <!-- Re-type Password Field -->
+        <div>
+            <label for="rpwd">Re-type Password:</label>
+            <input type="password" id="rpwd" name="rpwd" required>
+        </div>
+        <br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
